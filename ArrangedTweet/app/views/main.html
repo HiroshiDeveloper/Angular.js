@@ -1,3 +1,31 @@
+<div class="container" ng-controller="MainCtrl">
+	<h1>My Twitter</h1>
+        <div class="row">
+		<div class="col-xs-12">
+			<button ng-click="main.connect()" id="connectButton" type="button" class="btn btn-primary">サインイン</button>
+			<button ng-click="main.refresh()" id="getTimelineButton" type="button" class="btn btn-info">更新</button>
+			<button ng-click="main.signOut()" id="signOut" type="button" class="btn btn-link">サインアウト</button>
+		</div>
+	</div>
+	<label>TEST</label>
+	<hr/>
+
+	<div class="row">
+		<div class="col-xs-12" id="results">
+			<div class="row well" ng-repeat="tweet in main.tweets">
+				<div class="col-xs-2">
+					<img ng-src="{{tweet.user.profile_image_url}}" class="img-circle">
+				</div>
+				<div class="col-xs-10">
+					<small>{{tweet.user.name}}</small>
+					<br><span ng-bind-html="tweet.text">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
 <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
@@ -21,3 +49,4 @@
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
 </div>
+-->

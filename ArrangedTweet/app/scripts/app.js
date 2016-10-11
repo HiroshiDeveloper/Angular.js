@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'arrangedTweetApp.services'
   ])
   .config(function ($routeProvider) {
     $routeProvider
