@@ -1,12 +1,13 @@
 <div class="container-fluid">
+	<a href="/#"><h5>>>Go Back to Main Page</h5></a><br/>
 	<div class="row" ng-show="profile.showProfile">
-		<div class="col-md-3 text-center">
+		<div class="col-md-1 text-center imgWrap">
 			<img ng-src="{{profile.info.avatar}}" class="img-rounded" />
 			<div>
 				<small>{{profile.alias}}</small>
 			</div>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-11">
 			<dl class="dl-horizontal">
 				<dt>Name</dt>
 				<dd>{{profile.info.name}}</dd>

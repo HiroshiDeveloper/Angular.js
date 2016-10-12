@@ -1,19 +1,13 @@
-<script>
-	function display(num){
-		if (num == 1){
-	      		document.getElementById("user").style.visibility="hidden";
-		}
-	}
-</script>
-
 <div class="container" ng-controller="MainCtrl"><br/>
 	<div id="user">
+		<button ng-click="main.signOut()" id="signOut" type="button" class="btn btn-link right">Signout</button>
 		<h2 id="userName"  class="textLeft">Signin as "{{main.info.name}}"<h2/>
-		<a href="/#/profile" id="bottle">
-			<img id="icon" ng-src="{{main.info.avatar}}" class="img-rounded left"/>
-			<h5>Go to My Page</h5>
+		<a class="left"  href="/#/profile" id="bottle">
+			<img id="icon" ng-src="{{main.info.avatar}}" class="img-rounded"/><br/>
+			<h5>>>Go to My Page</h5>
 		</a>
-		<button ng-click="main.signOut()" id="signOut" type="button" class="btn btn-warning textLeft" onclick="display(1)">Signout</button>
+		<h5>Time Stamp:</h5>
+		<h5 id="date"></h5>
 	</div><br/>
 
         <div class="row">

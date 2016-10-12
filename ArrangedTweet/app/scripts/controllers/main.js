@@ -18,7 +18,10 @@ function MainController(twitterService) {
 			.then(function(result){
 				vm.info = result;
 				vm.showProfile = true;
-				document.getElementById("user").style.visibility ="visible";
+				$("#user").show();
+				
+				var date = new Date();
+				document.getElementById("date").innerText = date;
 			}, function(){
 				// error
 			});
@@ -40,7 +43,9 @@ function MainController(twitterService) {
 			      		.then(function(result){
 						vm.info = result;
 						vm.showProfile = true;
-						document.getElementById("user").style.visibility ="visible";
+						$("#user").show();
+						var date = new Date();
+						document.getElementById("date").innerText = date;
 					}, function(){
 						// error
 					});
@@ -53,6 +58,8 @@ function MainController(twitterService) {
 	vm.signOut = function() {
 		twitterService.clearCache();
 		vm.tweets = [];
+		document.getElementById("date").innerText = "";
+		$("#user").css('display', 'none');
 	};
 
 	if (twitterService.isReady()) {
@@ -60,20 +67,6 @@ function MainController(twitterService) {
 	}
 }
 
-
-
-
 angular.module('arrangedTweetApp')
   .controller('MainCtrl', MainController);
 
-
-/*
-angular.module('arrangedTweetApp')
-  .controller('MainCtrl', function () {
-	this.awesomeThings = [
-      		'HTML5 Boilerplate',
-      		'AngularJS',
-      		'Karma'
-    	];
-  });
-*/
