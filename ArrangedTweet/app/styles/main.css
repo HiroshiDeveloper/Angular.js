@@ -1,3 +1,35 @@
+/* Original*/
+
+.left {
+  float: left;
+}
+
+#user{
+  visibility: hidden;
+}
+
+#icon{
+  margin: 5px;
+}
+
+.textleft{
+  text-align: left;
+}
+
+.right{
+  float: right;
+}
+
+#connectButton{
+  margin: 5px;
+}
+
+#getTimelineButton{
+  margin: 5px;
+}
+
+/* Template */
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

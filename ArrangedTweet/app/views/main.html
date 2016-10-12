@@ -1,11 +1,25 @@
-<div class="container" ng-controller="MainCtrl">
-	<h1>My Twitter</h1>
+<script>
+	function display(num){
+		if (num == 1){
+	      		document.getElementById("user").style.visibility="hidden";
+		}
+	}
+</script>
+
+<div class="container" ng-controller="MainCtrl"><br/>
+	<div id="user">
+		<h2 id="userName"  class="textLeft">Signin as "{{main.info.name}}"<h2/>
+		<a href="/#/profile" id="bottle">
+			<img id="icon" ng-src="{{main.info.avatar}}" class="img-rounded left"/>
+			<h5>Go to My Page</h5>
+		</a>
+		<button ng-click="main.signOut()" id="signOut" type="button" class="btn btn-warning textLeft" onclick="display(1)">Signout</button>
+	</div><br/>
+
         <div class="row">
 		<div class="col-xs-12">
-			<label>{{main.info.name}}</label>
-			<button ng-click="main.connect()" id="connectButton" type="button" class="btn btn-primary">Signin</button>
-			<button ng-click="main.refresh()" id="getTimelineButton" type="button" class="btn btn-info">Refresh</button>
-			<button ng-click="main.signOut()" id="signOut" type="button" class="btn btn-link">Signout</button>
+			<button ng-click="main.connect()" id="connectButton" type="button" class="right btn btn-primary" onclick="display(0)" >Signin</button>
+			<button ng-click="main.refresh()" id="getTimelineButton" type="button" class="right btn btn-info">Refresh</button>
 		</div>
 	</div><br/>
 
@@ -23,4 +37,5 @@
 		</div>
 	</div>
 </div>
+
 

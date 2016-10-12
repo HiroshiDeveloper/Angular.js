@@ -12,12 +12,13 @@ function MainController(twitterService) {
 	
 	vm.tweets = [];
 	twitterService.initialize();
-
+	
 	if (twitterService.isReady()){
 		twitterService.getMe()
 			.then(function(result){
 				vm.info = result;
 				vm.showProfile = true;
+				document.getElementById("user").style.visibility ="visible";
 			}, function(){
 				// error
 			});
@@ -35,6 +36,14 @@ function MainController(twitterService) {
 		twitterService.connectTwitter().then(function() {
 			if (twitterService.isReady()) {
 				vm.refresh();
+				twitterService.getMe()
+			      		.then(function(result){
+						vm.info = result;
+						vm.showProfile = true;
+						document.getElementById("user").style.visibility ="visible";
+					}, function(){
+						// error
+					});
 			} else {
 				console.log('unable to connect twitter');
 			}
@@ -50,6 +59,8 @@ function MainController(twitterService) {
 		vm.refresh();
 	}
 }
+
+
 
 
 angular.module('arrangedTweetApp')
