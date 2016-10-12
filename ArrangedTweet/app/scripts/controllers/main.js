@@ -12,6 +12,17 @@ function MainController(twitterService) {
 	
 	vm.tweets = [];
 	twitterService.initialize();
+
+	if (twitterService.isReady()){
+		twitterService.getMe()
+			.then(function(result){
+				vm.info = result;
+				vm.showProfile = true;
+			}, function(){
+				// error
+			});
+	}
+
 	vm.refresh = function() {
 		twitterService.getLatestTweets().then(function(result) {
 			vm.tweets = vm.tweets.concat(result);
