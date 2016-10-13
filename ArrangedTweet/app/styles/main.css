@@ -52,6 +52,7 @@ form .ng-valid.ng-dirty {
   text-decoration: none;	
 }
 
+<<<<<<< HEAD
 ul{
   list-style: none;
   margin-left: -15px;
@@ -84,6 +85,8 @@ ul:nth-child(even){
 
 }
 
+=======
+>>>>>>> 4b99480546ed7d57af1c357872deb39c8690fe1b
 /* Template */
 
 .browsehappy {
