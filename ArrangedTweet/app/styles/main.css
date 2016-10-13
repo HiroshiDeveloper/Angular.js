@@ -32,6 +32,22 @@
   margin: 5px;
 }
 
+form .ng-invalid.ng-dirty {
+  background-color: lightpink;
+}
+
+form .ng-valid.ng-dirty {
+  background-color: lightcyan;
+}
+
+.tweetGroup{
+  background-color: #e6ffff;	
+}
+
+#tweetSubmit{
+  margin: 5px;
+}
+
 /* Template */
 
 .browsehappy {

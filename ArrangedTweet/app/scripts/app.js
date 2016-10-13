@@ -16,7 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'arrangedTweetApp.services'
+    'arrangedTweetApp.services',
+    'ngMessages',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider

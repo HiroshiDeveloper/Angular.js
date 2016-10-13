@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<a href="/#"><h5>>>Go Back to Main Page</h5></a><br/>
+	<a href="/#/"><h5><span class="glyphicon glyphicon-home"></span> Go Back to Main Page</h5></a><br/>
 	<div class="row" ng-show="profile.showProfile">
 		<div class="col-md-1 text-center imgWrap">
 			<img ng-src="{{profile.info.avatar}}" class="img-rounded" />
@@ -20,8 +20,23 @@
 				<dt>website</dt>
 				<dd><a href="{{profile.info.website}}">{{profile.info.website}}</a></dd>
 			</dl>
-		</div>											
+		</div>										
 	</div>
+	<div class="row">
+		<div class="col-md-12" ng-show="profile.showTweet">
+			<form name="tweetForm" ng-submit="profile.submit()" novalidate role="form">
+				<div class="form-group">
+					<textarea class="form-control" name="tweet" ng-maxlength="140" ng-model="profile.inputText" ng-required="true" placeholder="Let's tweet!"></textarea>
+					<div ng-if="tweetForm.tweet.$dirty" ng-messages="tweetForm.tweet.$error" role="alert">
+						<div ng-message="required">Please put some words</div>
+						<div ng-message="maxlength">Maximum is 140 words</div>
+					</div>
+					<button id="tweetSubmit" class="right btn btn-primary" ng-disabled="tweetForm.$invalid" type="submit"><span class="glyphicon glyphicon-pencil"></span>Tweet</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<hr>
 	<div class="row">
 		<div class="col-md-12">		
