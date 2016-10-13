@@ -48,6 +48,10 @@ form .ng-valid.ng-dirty {
   margin: 5px;
 }
 
+#refreshTweet{
+  text-decoration: none;	
+}
+
 /* Template */
 
 .browsehappy {
