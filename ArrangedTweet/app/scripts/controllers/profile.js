@@ -37,12 +37,14 @@ function ProfileControl(twitterService) {
 	vm.submit = function() {
 		twitterService.postTweet(vm.inputText)
     			.then(function(result) {
-				$window.location.reload();
+				alert("Success");
+				document.location.reload(true)
 			}, function(err) {
-				console.log(err);
+				alert("Error");
 			});
      	};
 }
+
 
 angular.module('arrangedTweetApp')
     .controller('ProfileCtrl', ProfileControl);

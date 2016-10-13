@@ -16,20 +16,22 @@
 			<button ng-click="main.refresh()" id="getTimelineButton" type="button" class="right btn btn-info"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
 		</div>
 	</div><br/>
-
-	<div class="row">
-		<div class="col-xs-12" id="results">
-			<div class="row well" ng-repeat="tweet in main.tweets">
-				<div class="col-xs-2">
-					<img ng-src="{{tweet.user.profile_image_url}}" class="img-circle">
-				</div>
-				<div class="col-xs-10">
-					<small>{{tweet.user.name}}</small>
-					<br><span ng-bind-html="tweet.text">
-				</div>
-			</div>
+	
+	<!-- Tweet List -->
+	<div class="panel panel-info" id="results">
+		<div class="panel-heading">Tweet List</div>
+		<div class="panel-body">
+			<ul ng-repeat="tweet in main.tweets">
+				<div class="row">
+					<div class="col-xs-2">
+						<img ng-src="{{tweet.user.profile_image_url}}" class="img-circle tweetIcon">
+					</div>
+					<div class="col-xs-10 tweetContents">
+						<small>{{tweet.user.name}}</small>
+						<br><span ng-bind-html="tweet.text">
+					</div>
+				<div/>
+			<ul/>
 		</div>
 	</div>
-</div>
-
 

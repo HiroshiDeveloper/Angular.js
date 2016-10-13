@@ -48,6 +48,42 @@ form .ng-valid.ng-dirty {
   margin: 5px;
 }
 
+#refreshTweet{
+  text-decoration: none;	
+}
+
+ul{
+  list-style: none;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 2px;
+
+}
+
+ul:nth-child(even){
+  background-color: #E6E9EB;
+}
+
+@media only screen and (max-width: 480px){
+  .tweetIcon{
+    height: 30px;
+    width: 30px;
+  }
+
+  #userName{
+    font-size: 20px;
+  }
+
+  .tweetContents{
+    font-size: 15px;
+  }
+
+  h5{
+    font-size: 12px;
+  }
+
+}
+
 /* Template */
 
 .browsehappy {
