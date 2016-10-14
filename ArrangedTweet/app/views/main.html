@@ -6,8 +6,8 @@
 			<img id="icon" ng-src="{{main.info.avatar}}" class="img-rounded"/><br/>
 			<h5><span class="glyphicon glyphicon-user"></span> Go to My Page</h5>
 		</a>
-		<h5>Time Stamp:</h5>
-		<h5 id="date"></h5>
+		<h5 style="display:inline;">Time Stamp:</h5>
+		<h5 id="date" style="display:inline;"></h5>
 	</div><br/>
 
         <div class="row">
@@ -23,7 +23,7 @@
 		<div class="panel-body">
 			<ul ng-repeat="tweet in main.tweets">
 				<div class="row">
-					<div class="col-xs-2">
+					<div class="col-xs-2 iconGroup">
 						<img ng-src="{{tweet.user.profile_image_url}}" class="img-circle tweetIcon">
 					</div>
 					<div class="col-xs-10 tweetContents">

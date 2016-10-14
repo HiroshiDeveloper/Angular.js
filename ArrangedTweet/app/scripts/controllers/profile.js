@@ -43,6 +43,12 @@ function ProfileControl(twitterService) {
 				alert("Error");
 			});
      	};
+
+	vm.parseDate = function(twitterDate) {
+		var date = new Date(twitterDate);
+		return date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()+" "
+			+date.getHours()+":"+date.getMinutes();
+	}
 }
 
 

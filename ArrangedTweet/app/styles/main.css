@@ -64,6 +64,10 @@ ul:nth-child(even){
   background-color: #E6E9EB;
 }
 
+.iconGroup{
+  text-align: center;
+}
+
 @media only screen and (max-width: 480px){
   .tweetIcon{
     height: 30px;

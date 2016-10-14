@@ -19,9 +19,12 @@ function MainController(twitterService) {
 				vm.info = result;
 				vm.showProfile = true;
 				$("#user").show();
+				$("#results").show();
 				
-				var date = new Date();
-				document.getElementById("date").innerText = date;
+				var d = new Date();
+				var formatDate = d.getFullYear()+'/'+(d.getMonth() + 1)+'/'+d.getDate()+' '
+					+d.getHours()+':'+d.getMinutes();
+				document.getElementById("date").innerText = formatDate;
 			}, function(){
 				// error
 			});
@@ -44,8 +47,11 @@ function MainController(twitterService) {
 						vm.info = result;
 						vm.showProfile = true;
 						$("#user").show();
-						var date = new Date();
-						document.getElementById("date").innerText = date;
+						$("#results").show();
+						var d = new Date();
+						var formatDate = d.getFullYear()+'/'+(d.getMonth() + 1)+'/'+d.getDate()+' '
+					+d.getHours()+':'+d.getMinutes();
+						document.getElementById("date").innerText = formatDate;
 					}, function(){
 						// error
 					});
@@ -60,6 +66,7 @@ function MainController(twitterService) {
 		vm.tweets = [];
 		document.getElementById("date").innerText = "";
 		$("#user").css('display', 'none');
+		$("#results").css('display', 'none');
 	};
 
 	if (twitterService.isReady()) {
