@@ -46,10 +46,10 @@
 					<div class="col-xs-2 iconGroup">
 						<img ng-src="{{tweet.user.profile_image_url}}" class="img-circle tweetIcon">
 					</div>
-					<div class="col-xs-10">
+					<div class="col-xs-10 tweetContents">
 						<small>{{tweet.user.name}} </small>
-						<span ng-bind-html="profile.parseDate(tweet.created_at)"></span>
-						<h4 ng-bind-html="tweet.text"></h4>
+						<span id="tweetDate" class="right" ng-bind-html="profile.parseDate(tweet.created_at)"></span><br/>
+						<span ng-bind-html="tweet.text"></span>
 					</div>
 				</div>
 			</ul>

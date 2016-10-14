@@ -16,6 +16,10 @@
   text-align: left;
 }
 
+.textRight{
+  text-align: right;
+}
+
 .right{
   float: right;
 }
@@ -30,6 +34,10 @@
 
 #signOut{
   margin: 5px;
+}
+
+#tweetDate{
+  margin-right: 3px; 
 }
 
 form .ng-invalid.ng-dirty {
@@ -84,6 +92,10 @@ ul:nth-child(even){
 
   h5{
     font-size: 12px;
+  }
+
+  #tweetDate{
+    font-size: 10px;
   }
 
 }
